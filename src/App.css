@@ -1,0 +1,140 @@
+.page { background: #7dd8d2; min-height: 100vh; padding-bottom: 48px; }
+
+.awning { width: 100%; display: block; }
+
+.hero {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.8rem;
+  color: #fff;
+  text-align: center;
+  margin: 28px 0 8px;
+  text-shadow: 2px 3px 0 rgba(0,0,0,0.18);
+}
+
+.sub { text-align: center; color: #fff; font-size: 1rem; font-weight: 700; margin-bottom: 28px; opacity: 0.9; }
+
+.filter-bar { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; padding: 0 16px; }
+
+.ftag {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  padding: 5px 16px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.ftag:hover, .ftag.active { background: #fff; color: #0a8a83; border-color: #fff; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 18px;
+  padding: 0 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(0,0,0,0.18); }
+
+.cimg-wrap { overflow: hidden; height: 150px; }
+.cimg { width: 100%; height: 150px; object-fit: cover; display: block; transition: transform 0.3s; }
+.card:hover .cimg { transform: scale(1.06); }
+
+.cbody { padding: 14px 12px 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.cname { font-weight: 800; font-size: 1rem; color: #1a1a1a; }
+.ccuisine { font-size: 0.78rem; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+.cdesc { font-size: 0.82rem; color: #555; line-height: 1.4; margin-top: 4px; flex: 1; }
+
+.cmeta { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+.badge { font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 10px; background: #e8faf8; color: #0a8a83; }
+.badge.hot { background: #fef0e7; color: #c44d0a; }
+
+.cbtns { display: flex; gap: 8px; margin-top: 10px; }
+.cbtn {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cbtn.primary { background: #cc2222; color: #fff; }
+.cbtn.primary:hover { background: #a81b1b; }
+.cbtn.secondary { background: #e8faf8; color: #0a8a83; border: 1.5px solid #0a8a83; }
+.cbtn.secondary:hover { background: #0a8a83; color: #fff; }
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 16px;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 30px;
+  width: 340px;
+  max-width: 100%;
+  position: relative;
+  animation: su 0.22s ease;
+}
+@keyframes su { from { transform: translateY(16px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.mclose { position: absolute; top: 10px; right: 12px; background: none; border: none; font-size: 1.1rem; color: #aaa; cursor: pointer; padding: 4px 8px; border-radius: 50%; }
+.mclose:hover { background: #f0f0f0; color: #333; }
+
+.mtitle { font-family: 'Pacifico', cursive; font-size: 1.45rem; color: #1a1a1a; margin-bottom: 2px; }
+.mcuisine { font-size: 0.78rem; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.6px; }
+.mdiv { height: 1.5px; background: #f0f0f0; margin: 14px 0; }
+
+.mlist { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.mrow { display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: 600; color: #222; }
+.mprice { font-weight: 800; color: #cc2222; }
+
+.mlink {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  padding: 9px;
+  background: #7dd8d2;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.mlink:hover { background: #5bbfb8; }
+
+@media (max-width: 500px) {
+  .hero { font-size: 2rem; }
+  .grid { grid-template-columns: 1fr 1fr; gap: 12px; padding: 0 12px; }
+  .cimg-wrap { height: 110px; }
+  .cimg { height: 110px; }
+}
