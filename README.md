@@ -4,7 +4,7 @@ Submitted by: Vrushti Patel
 
 This web app: A community showcase of Indian cricket teams and squads.
 
-Time spent: 3 and half hours spent in total
+Time spent: 4 hours spent in total
 
 ## Required Features
 
