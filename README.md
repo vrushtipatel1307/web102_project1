@@ -45,7 +45,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+It took me a while to figure out a way to put the top shelf design. I was not sure if I could change the design to fit the theme, but I tried my best. Thanks. 
 
 ## License
 
